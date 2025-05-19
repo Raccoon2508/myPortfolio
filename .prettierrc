@@ -1,0 +1,27 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "semi": true,
+  "printWidth": 120,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "htmlWhitespaceSensitivity": "ignore",
+  "bracketSameLine": false,
+  "overrides": [
+    {
+      "files": "**/*.html",
+      "options": {
+        "trailingComma": "none"
+      }
+    }
+  ],
+  "attributeGroups": [
+    "$ANGULAR_STRUCTURAL_DIRECTIVE",
+    "$ANGULAR_INPUT",
+    "$ANGULAR_OUTPUT",
+    "$ANGULAR_TWO_WAY_BINDING",
+    "$ANGULAR_ELEMENT_REF",
+    "$ID",
+    "$DEFAULT"
+  ]
+}

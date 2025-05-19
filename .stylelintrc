@@ -1,0 +1,25 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "ignoreFiles": ["/*.ts", "/*.js", "/*.html", "/*.md", "/*.svg"],
+  "rules": {
+    "order/order": null,
+    "order/properties-order": null,
+    "order/properties-alphabetical-order": null,
+
+    "scss/dollar-variable-pattern": "^[a-zA-Z0-9-]*$",
+    "scss/at-function-pattern": "^[a-zA-Z0-9-]*$",
+    "scss/at-mixin-pattern": "^[a-zA-Z0-9-]*$",
+    "scss/percent-placeholder-pattern": "^[a-zA-Z0-9-]*$",
+
+    "color-hex-length": "long",
+    "color-hex-case": "upper",
+    "max-nesting-depth": 3,
+    "selector-pseudo-element-no-unknown": [true, { "ignorePseudoElements": ["ng-deep"] }],
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-no-important": true,
+    "no-duplicate-selectors": true,
+    "color-named": ["never", { "ignore": ["inside-function"] }],
+    "indentation": null,
+    "function-parentheses-space-inside": null
+  }
+}

@@ -1,0 +1,8 @@
+<mat-card class="user-form-card">
+    <div role="button" aria-label="Add new form" class="card-button" (click)="onCardClick()" [ngClass]="{disabled: disabled}"
+        (keydown.space)="onCardClick()" (keydown.enter)="onCardClick()" tabindex="0">
+        <div class="dotted-circle">
+            <div class="plus-symbol">+</div>
+        </div>
+    </div>
+</mat-card>

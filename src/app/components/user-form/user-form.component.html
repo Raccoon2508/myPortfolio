@@ -1,0 +1,37 @@
+<mat-card class="form-card user-form-card">
+    <div class="toolbar">
+        <button mat-flat-button (click)="deleteCard()" [disabled]="formGroup.disabled">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <form [formGroup]="formGroup" class="form">
+        <mat-form-field>
+            <mat-label>Country</mat-label>
+            <input type="text" matInput [formControlName]="'userCountry'" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+                @for (option of filteredOptions$ | async; track option) {
+                <mat-option [value]="option">{{option}}</mat-option>
+                }
+            </mat-autocomplete>
+            @if (formGroup.controls['userCountry'].hasError('invalidCountry')) {
+                <mat-error>{{ getErrorMessage('Country') }}</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput [formControlName]="'userName'">
+            @if (formGroup.controls['userName'].hasError('oldUser')) {
+                <mat-error>{{ getErrorMessage('Username') }}</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Birthday</mat-label>
+            <input matInput [matDatepicker]="picker" [formControlName]="'userBirthday'">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            @if (formGroup.controls['userBirthday'].hasError('invalidBirthday')) {
+                <mat-error>{{ getErrorMessage('Birthday') }}</mat-error>
+            }
+        </mat-form-field>
+    </form>
+</mat-card>
