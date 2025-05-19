@@ -1,0 +1,26 @@
+<div role="form" class="forms-wrapper">
+    <div class="user-forms-toolbar">
+        @if (!(pendingTimer$ | async)) {
+            <button (click)="submitForm()" mat-flat-button [disabled]="!!(invalidFormsCounter$ | async) || !userCardsArray.length" color="primary">Submit all forms</button>
+        }
+        @if (pendingTimer$ | async) {
+            <button (click)="cancelPendingTimer()" mat-flat-button color="accent">cancel</button>
+        }
+        @if (invalidFormsCounter$ | async) {
+        <div class="invalid-form-error">
+            <mat-error>Invalid forms: {{ invalidFormsCounter$ | async }}</mat-error>
+        </div>
+        }
+        @if (pendingTimer$ | async) {
+        <div class="pending-timer">
+            <span>{{ pendingTimer$ | async | date:'mm:ss'}}</span>
+        </div>
+        }
+    </div>
+    <div class="user-forms-container">
+        <app-user-form *ngFor="let item of userCardsArray; index as index;"
+            [formGroup]="userFormControlsArray.at(index)" (deleteUserCard)="deleteUserCard(index)"></app-user-form>
+        <app-add-form-card (addCardClick)="addCard()"
+            [disabled]="userFormControlsArray.value.length >= 10 || disabled"></app-add-form-card>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.forms-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 600px;
+    max-width: 100%;
+}
+
+.user-forms-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+}
+
+.user-forms-toolbar {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.invalid-form-error, .pending-timer {
+    margin-left: 1em;
+}

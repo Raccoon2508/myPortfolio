@@ -1,0 +1,28 @@
+.card-button {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dotted-circle {
+    border-radius: 50%;
+    border: 2px dotted blue;
+    width: 2em;
+    height: 2em;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 3em;
+    color: blue;
+}
+
+.disabled {
+    background-color: lightgray;
+    .dotted-circle {
+        border: 2px dotted gray;
+        color: gray;
+    }
+}
