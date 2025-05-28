@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { NavigationPath } from '@/shared/constants/app.config';
+
 const routes: Routes = [
     {
         path: '',
@@ -8,12 +10,16 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'main-page',
-        loadChildren: () => import('./pages/main-page/main-page.module').then(m => m.MainPageModule)
+        path: NavigationPath.MAIN_PAGE,
+        loadChildren: () => import('./pages/main-page/main-page.module').then(module => module.MainPageModule)
     },
     {
-        path: 'forms-page',
-        loadChildren: () => import('./pages/forms-page/forms-page.module').then(m => m.FormsPageModule)
+        path: NavigationPath.FORMS_PAGE,
+        loadChildren: () => import('./pages/forms-page/forms-page.module').then(module => module.FormsPageModule)
+    },
+    {
+        path: NavigationPath.STYLES_LABORATORY,
+        loadChildren: () => import('./pages/styles-laboratory/styles-laboratory.module').then(module => module.StylesLaboratoryModule)
     }
 ];
 

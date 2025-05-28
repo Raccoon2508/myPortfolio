@@ -5,10 +5,10 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { BehaviorSubject, map, Subject, takeUntil, takeWhile, tap, timer } from 'rxjs';
 
-import { IUserForm } from '../../shared/models/user-form.model';
-import { forbiddenBirthdayValidator } from '../../shared/validators/birthday.validator';
-import { forbiddenCountryValidator } from '../../shared/validators/country.validator';
-import { NewUserValidator } from '../../shared/validators/user-async.validator';
+import { IUserForm } from '@/shared/models/user-form.model';
+import { forbiddenBirthdayValidator } from '@/shared/validators/birthday.validator';
+import { forbiddenCountryValidator } from '@/shared/validators/country.validator';
+import { NewUserValidator } from '@/shared/validators/user-async.validator';
 
 @UntilDestroy()
 @Component({

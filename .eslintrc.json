@@ -2,7 +2,9 @@
   "root": true,
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": [
+        "*.ts"
+      ],
       "plugins": [
         "@typescript-eslint",
         "eslint-plugin-rxjs",
@@ -13,7 +15,9 @@
       ],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
-        "project": ["tsconfig.json"],
+        "project": [
+          "tsconfig.json"
+        ],
         "createDefaultProgram": true
       },
       "extends": [
@@ -28,7 +32,13 @@
         "no-trailing-spaces": "error",
         "semi": "error",
         "quotes": "off",
-        "@typescript-eslint/quotes": ["error", "single", { "avoidEscape": true }],
+        "@typescript-eslint/quotes": [
+          "error",
+          "single",
+          {
+            "avoidEscape": true
+          }
+        ],
         "@angular-eslint/component-selector": [
           "error",
           {
@@ -89,16 +99,24 @@
           "off",
           {
             "selector": "default",
-            "format": ["camelCase"]
+            "format": [
+              "camelCase"
+            ]
           },
           {
             "selector": "variable",
-            "format": ["camelCase", "UPPER_CASE", "PascalCase"],
+            "format": [
+              "camelCase",
+              "UPPER_CASE",
+              "PascalCase"
+            ],
             "leadingUnderscore": "allow"
           },
           {
             "selector": "variable",
-            "modifiers": ["const"],
+            "modifiers": [
+              "const"
+            ],
             "format": null,
             "custom": {
               "regex": "^([^_]*|[A-Z0-9_]*)$",
@@ -108,28 +126,49 @@
           },
           {
             "selector": "parameter",
-            "format": ["camelCase", "PascalCase"],
+            "format": [
+              "camelCase",
+              "PascalCase"
+            ],
             "leadingUnderscore": "allow"
           },
           {
             "selector": "typeLike",
-            "format": ["PascalCase"]
+            "format": [
+              "PascalCase"
+            ]
           },
           {
-            "selector": ["objectLiteralProperty", "typeProperty"],
+            "selector": [
+              "objectLiteralProperty",
+              "typeProperty"
+            ],
             "format": null
           },
           {
-            "selector": ["enumMember"],
-            "format": ["camelCase", "UPPER_CASE"]
+            "selector": [
+              "enumMember"
+            ],
+            "format": [
+              "camelCase",
+              "UPPER_CASE"
+            ]
           },
           {
-            "selector": ["classProperty"],
-            "format": ["camelCase", "PascalCase", "UPPER_CASE"]
+            "selector": [
+              "classProperty"
+            ],
+            "format": [
+              "camelCase",
+              "PascalCase",
+              "UPPER_CASE"
+            ]
           },
           {
             "selector": "interface",
-            "format": ["PascalCase"],
+            "format": [
+              "PascalCase"
+            ],
             "custom": {
               "regex": "^I[A-Z]",
               "match": true
@@ -137,7 +176,9 @@
           },
           {
             "selector": "enum",
-            "format": ["PascalCase"],
+            "format": [
+              "PascalCase"
+            ],
             "custom": {
               "regex": "^E[A-Z]",
               "match": false
@@ -145,7 +186,9 @@
           },
           {
             "selector": "typeAlias",
-            "format": ["PascalCase"],
+            "format": [
+              "PascalCase"
+            ],
             "custom": {
               "regex": "^T[A-Z]",
               "match": false
@@ -165,7 +208,9 @@
             "ignoreRestSiblings": false
           }
         ],
-        "@typescript-eslint/no-useless-constructor": ["error"],
+        "@typescript-eslint/no-useless-constructor": [
+          "error"
+        ],
         "@typescript-eslint/prefer-namespace-keyword": "error",
         "@typescript-eslint/prefer-ts-expect-error": "error",
         "@typescript-eslint/type-annotation-spacing": "error",
@@ -183,25 +228,47 @@
               "date-fns",
               "lodash"
             ],
-            "patterns": ["**/src/*", "rxjs/internal/*", "!./src/*", "..*", "libs/*"]
+            "patterns": [
+              "**/src/*",
+              "rxjs/internal/*",
+              "!./src/*",
+              "..*",
+              "libs/*"
+            ]
           }
         ],
         "@typescript-eslint/member-ordering": 0,
-        "eqeqeq": ["error", "smart"],
+        "eqeqeq": [
+          "error",
+          "smart"
+        ],
         "id-length": [
           "error",
           {
-            "exceptionPatterns": ["^(x|y|z|i|j|_|.{2,})$"],
+            "exceptionPatterns": [
+              "^(x|y|z|i|j|_|.{2,})$"
+            ],
             "properties": "never"
           }
         ],
         "id-match": "error",
-        "max-classes-per-file": ["error", 4],
+        "max-classes-per-file": [
+          "error",
+          4
+        ],
         "no-constant-condition": "error",
         "no-empty": [
           "error",
           {
             "allowEmptyCatch": true
+          }
+        ],
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              ".*"
+            ]
           }
         ],
         "no-eval": "error",
@@ -224,7 +291,10 @@
         "rxjs/no-unsafe-takeuntil": [
           "off",
           {
-            "alias": ["takeUntilDestroyed", "takeUntil"]
+            "alias": [
+              "takeUntilDestroyed",
+              "takeUntil"
+            ]
           }
         ],
         "sort-class-members/sort-class-members": [
@@ -379,8 +449,12 @@
           "error",
           "always",
           {
-            "markers": ["/"],
-            "exceptions": ["*"]
+            "markers": [
+              "/"
+            ],
+            "exceptions": [
+              "*"
+            ]
           }
         ],
         "no-multiple-empty-lines": [
@@ -397,7 +471,15 @@
               "caseInsensitive": true,
               "order": "asc"
             },
-            "groups": ["external", "builtin", "parent", ["sibling", "index"]],
+            "groups": [
+              "external",
+              "builtin",
+              "parent",
+              [
+                "sibling",
+                "index"
+              ]
+            ],
             "newlines-between": "always-and-inside-groups",
             "pathGroups": [
               {
@@ -431,33 +513,50 @@
                 "position": "after"
               }
             ],
-            "pathGroupsExcludedImportTypes": ["builtin"]
+            "pathGroupsExcludedImportTypes": [
+              "builtin"
+            ]
           }
         ],
         "no-console": [
           "warn",
           {
-            "allow": ["warn", "error"]
+            "allow": [
+              "warn",
+              "error"
+            ]
           }
         ],
         "rxjs-angular/prefer-takeuntil": [
           "off",
           {
-            "alias": ["takeUntilDestroyed"]
+            "alias": [
+              "takeUntilDestroyed"
+            ]
           }
         ]
       }
     },
     {
-      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "files": [
+        "*.spec.ts",
+        "*.spec.tsx",
+        "*.spec.js",
+        "*.spec.jsx"
+      ],
       "env": {
         "jest": true
       },
       "rules": {}
     },
     {
-      "files": ["*.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended", "plugin:@angular-eslint/template/accessibility"],
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility"
+      ],
       "rules": {}
     }
   ]

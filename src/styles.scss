@@ -1,9 +1,52 @@
-@import '@angular/material';
+@use '@angular/material' as mat;
 @import './app/shared/styles/common-styles.scss';
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 body {
     background: lightgrey;
+}
+
+$indigo-palette: (
+ 50: #e8eaf6,
+ 100: #c5cae9,
+ 200: #2bcc0a,
+ 300: #178b55,
+ 400: #95f31a,
+ 500: #accb79,
+ 600: #267502,
+ 700: #07c58c,
+ 800: #79cb80,
+ // ... continues to 900
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   400: white,
+   500: rgba(black, 0.87),
+   600: rgba(black, 0.87),
+   700: rgba(black, 0.87),
+   800: white,
+   900: rgba(black, 0.87),
+ )
+);
+
+$my-pallete: mat.define-palette($indigo-palette);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-pallete,
+   accent: $my-pallete,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($my-theme);
+
+body {
+  background-color: #fff;
 }

@@ -1,11 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsPageComponent } from './forms-page.component';
-import { AddFormCardComponent } from '../../components/add-form-card/add-form-card.component';
-import { UserFormComponent } from '../../components/user-form/user-form.component';
-import { AngularMaterialModule } from '../../shared/modules/angular-material/angular-material.module';
+import { NgModule } from '@angular/core';
+
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormsPageRoutingModule } from './forms-page.routing.module';
+
+import { AddFormCardComponent } from '@/components/add-form-card/add-form-card.component';
+
+import { UserFormComponent } from '@/components/user-form/user-form.component';
+
+import { FormsPageComponent } from '@/pages/forms-page/forms-page.component';
+
+import { FormsPageRoutingModule } from '@/pages/forms-page/forms-page.routing.module';
+import { AngularMaterialModule } from '@/shared/modules/angular-material/angular-material.module';
 
 @NgModule({
   declarations: [

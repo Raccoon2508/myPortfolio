@@ -4,10 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MockBackendInterceptor } from './shared/mock-backend/mock-backend.interceptor';
-import { AngularMaterialModule } from './shared/modules/angular-material/angular-material.module';
+import { AppRoutingModule } from '@/app-routing.module';
+import { AppComponent } from '@/app.component';
+import { MockBackendInterceptor } from '@/shared/mock-backend/mock-backend.interceptor';
+import { AngularMaterialModule } from '@/shared/modules/angular-material/angular-material.module';
 
 @NgModule({
     declarations: [

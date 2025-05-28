@@ -3,8 +3,9 @@
 
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
-        <a mat-menu-item routerLink="main-page">Main Page</a>
-        <a mat-menu-item routerLink="forms-page">Forms page</a>
+        <a mat-menu-item [routerLink]="NavigationPath.MAIN_PAGE">Main Page</a>
+        <a mat-menu-item [routerLink]="NavigationPath.FORMS_PAGE">Forms page</a>
+        <a mat-menu-item [routerLink]="NavigationPath.STYLES_LABORATORY">Styles lab</a>
     </mat-menu>
 
     <router-outlet></router-outlet>
