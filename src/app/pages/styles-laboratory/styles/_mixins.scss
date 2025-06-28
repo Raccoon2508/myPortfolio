@@ -1,0 +1,67 @@
+@mixin warning {
+    background-color: orange;
+    color: #fff;
+}
+
+@mixin large-text {
+    color: red;
+    @include rounded(8px);
+    font: {
+        size: 22px;
+        weight: bold;
+    }
+}
+
+@mixin rounded($radius: 6px, $color: $text-color) {
+    border: {
+        radius: $radius;
+        color: $color;
+    }
+}
+
+@mixin links {
+    a {
+        text-decoration: none;
+        color: $link-color;
+        font-style: italic;
+    }
+}
+
+@mixin content-test {
+  div {
+    @content;
+  }
+}
+
+@mixin tiny-screen {
+    @media only screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin small-screen {
+    @media only screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin medium-screen {
+    @media only screen and (max-width: 680px) {
+        @content;
+    }
+}
+
+@mixin large-screen {
+    @media only screen and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin box($border: 1px solid #fff, $radius: 12px) {
+    border: $border;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($shadows...) {
+    box-shadow: $shadows;
+}

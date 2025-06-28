@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+@import './variables';
+
+@function theme-color($multiplicator, $color: $basic-primary-color) {
+  $delta: calc(#{$multiplicator} / 100);
+  @return color(from #{$color} xyz calc(x - #{$delta}) calc(y - #{$delta}) z);
+}
+
+@function primary-color-level($multiplicator: 1) {
+    @return theme-color($multiplicator,  $basic-primary-color);
+}
+
+@function accent-color-level($multiplicator: 1) {
+    @return theme-color($multiplicator,  $basic-accent-color);
+}
+
+@function warn-color-level($multiplicator: 1) {
+    @return theme-color($multiplicator,  $basic-warn-color);
+}

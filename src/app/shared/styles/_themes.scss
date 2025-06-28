@@ -1,0 +1,132 @@
+@import './functions';
+
+.basis0-color {
+  width: 100%;
+  height: 100px;
+  background: primary-color-level(1);
+}
+
+.basis50-color {
+  width: 100%;
+  height: 100px;
+  background-color: primary-color-level(2);
+}
+
+.basis100-color {
+  width: 100%;
+  height: 100px;
+  background-color: primary-color-level(6);
+}
+
+
+$contrast: (
+  50: rgba(black, 0.87),
+  100: rgba(black, 0.87),
+  200: rgba(black, 0.87),
+  400: white,
+  500: rgba(black, 0.87),
+  600: rgba(black, 0.87),
+  700: rgba(black, 0.87),
+  800: white,
+  900: rgba(black, 0.87),
+);
+
+$nr-primary-theme: (
+  50: #e6f5ff,
+  100: #ccebff,
+  200: #b3e2ff,
+  300: #99d8ff,
+  400: #80ceff,
+  500: #66c4ff,
+  600: #4dbbff,
+  700: #33b1ff,
+  800: #1aa7ff,
+  // ... continues to 900
+  contrast: $contrast
+);
+
+$nr-accent-theme: (
+  50: #ffe6f0,
+  100: #ffcce0,
+  200: #ffb3d1,
+  300: #ff99c2,
+  400: #ff80b3,
+  500: #ff66a3,
+  600: #ff4d94,
+  700: #ff3385,
+  800: #ff1a75,
+  // ... continues to 900
+  contrast: $contrast
+);
+
+$nr-warn-theme: (
+  50: #ffebe6,
+  100: #ffd6cc,
+  200: #ffc2b3,
+  300: #ffad99,
+  400: #ff9980,
+  500: #ff8566,
+  600: #ff704d,
+  700: #ff5c33,
+  800: #ff471a,
+  // ... continues to 900
+  contrast: $contrast
+);
+
+$nr-dark-primary-theme: (
+  50: #efeef6,
+  100: #dedeed,
+  200: #cecde4,
+  300: #bebddb,
+  400: #adacd2,
+  500: #9d9cc9,
+  600: #9290c3,
+  700: #8d8bc1,
+  800: #7c7ab8,
+  // ... continues to 900
+  contrast: $contrast
+);
+
+$nr-dark-accent-theme: (
+  50: #f6eeee,
+  100: #eddede,
+  200: #e4cdcd,
+  300: #dbbdbd,
+  400: #d2acac,
+  500: #c99c9c,
+  600: #c28e8e,
+  700: #c18b8b,
+  800: #b87a7a,
+  // ... continues to 900
+  contrast: $contrast
+);
+
+$nr-dark-warn-theme: (
+  50: #fce8e8,
+  100: #fad1d1,
+  200: #ffc2b3,
+  300: #f7baba,
+  400: #f5a3a3,
+  500: #f28c8c,
+  600: #f07575,
+  700: #ee6363,
+  800: #ed5e5e,
+  // ... continues to 900
+  contrast: $contrast
+);
+
+$dark-theme-text-color-map: (
+  base: $dark-theme-text-color,
+  disabled: rgba($dark-theme-text-color, 0.38),
+  disabled-button: rgba($dark-theme-text-color, 0.38),
+  disabled-text: rgba($dark-theme-text-color, 0.38),
+  hint-text: rgba($dark-theme-text-color, 0.38),
+  secondary-text: rgba($dark-theme-text-color, 0.54),
+  icon: rgba($dark-theme-text-color, 0.54),
+  icons: rgba($dark-theme-text-color, 0.54),
+  text: rgba($dark-theme-text-color, 0.87),
+  slider-min: rgba($dark-theme-text-color, 0.87),
+  slider-off: rgba($dark-theme-text-color, 0.26),
+  slider-off-active: rgba($dark-theme-text-color, 0.38),
+  link: $dark-theme-text-color
+);
