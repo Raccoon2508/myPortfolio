@@ -6,7 +6,7 @@ import { NavigationPath } from '@/shared/constants/app.config';
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'main-page',
+        redirectTo: NavigationPath.MAIN_PAGE,
         pathMatch: 'full'
     },
     {
