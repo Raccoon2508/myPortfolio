@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainPageComponent } from './main-page.component';
+import { MainPageComponent } from '@/pages/main-page/main-page.component';
 
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
@@ -11,7 +11,7 @@ describe('MainPageComponent', () => {
       declarations: [MainPageComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(MainPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

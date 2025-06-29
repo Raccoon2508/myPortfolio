@@ -3,7 +3,7 @@ import { FormGroup } from '@angular/forms';
 
 import { map, Observable, startWith } from 'rxjs';
 
-import { Country } from '../../shared/enum/country';
+import { Country } from '@/shared/enum/country';
 
 @Component({
   selector: 'app-user-form',
@@ -13,6 +13,7 @@ import { Country } from '../../shared/enum/country';
 
 export class UserFormComponent implements AfterViewInit {
   @Input() disabled = false;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   @Input() formGroup = new FormGroup<any>({});
   @Output() deleteUserCard = new EventEmitter<void>();
 

@@ -2,7 +2,36 @@
     max-width: 80em;
     margin-left: auto;
     margin-right: auto;
-    background: #FFF;
     padding: 2em;
     box-sizing: border-box;
+}
+
+.navigation-bar {
+    width: 100%;
+    height: 3.5em;
+}
+
+@media screen and (min-width: 600px) {
+    .main-menu-toggle-button {
+        display: none;
+    }
+
+    .main-navigation {
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 5em;
+            max-width: 10em;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-navigation {
+        display: none;
+    }
 }

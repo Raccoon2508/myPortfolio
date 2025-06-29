@@ -1,0 +1,92 @@
+@import './styles/variables';
+@import './styles/mixins';
+@import './styles/functions';
+
+@include links;
+
+@include content-test {
+  background: lightblue;
+}
+
+
+body {
+  font-family: $text-font;
+  color: $text-color;
+  font-size: em(15px);
+  border: 3px solid pink;
+
+  @include large-screen {
+    font-size: 150%;
+    color: green;
+  }
+}
+
+.error {
+  border: 2px solid red;
+}
+
+h1,
+h2, 
+h3,
+h4 {
+  font-family: $headline-font;
+  @include large-text;
+  @extend body;
+}
+
+p {
+  font-family: $text-font;
+}
+
+a {
+  color: $link-color;
+}
+
+#header {
+  @include box();
+  @include box-shadow(2px 0px 4px #999, 1px 1px 6px #222);
+  height: $header-height;
+  background-color: lighten($theme-color, 50%);
+  transition: background-color 50s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background-color: darken($theme-color, 50%);
+  }
+
+  li {
+    display: inline;
+  }
+
+  #main-menu {
+    a {
+      color: lighten($menu-item-color, 30%);
+      padding: 6px 8px;
+      border-bottom: 1px solid transparentize($color: #fefefe, $amount: 0.5);
+      transition: border-bottom .3s;
+      transition-timing-function: ease-in-out;
+      
+
+      &:hover {
+        border-bottom: 1px solid opacify($color: #fefefe, $amount: 1)
+      }
+    }
+  }
+
+  #logo {}
+}
+
+#main {
+  width: $content-width;
+
+  #content {}
+
+  #sidebar {}
+}
+
+#footer {}
+
+.warning-button {
+  @include warning;
+  padding: 8px 12px;
+}

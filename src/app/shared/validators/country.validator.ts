@@ -1,6 +1,6 @@
 import { ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
 
-import { Country } from '../enum/country';
+import { Country } from '@/shared/enum/country';
 
 export function forbiddenCountryValidator(): ValidatorFn {
     return (control: AbstractControl<string>): ValidationErrors | null => {

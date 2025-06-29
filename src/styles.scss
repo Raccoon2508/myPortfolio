@@ -1,9 +1,80 @@
-@import '@angular/material';
+@use '@angular/material' as mat;
 @import './app/shared/styles/common-styles.scss';
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import './app/shared/styles/themes';
+@import './app/shared/styles/variables';
+@import './app/shared/styles/common-styles';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@include mat.core();
 
-body {
-    background: lightgrey;
+@font-face {
+  font-family: BMWFontLatin;
+  src: url(assets/fonts/BMWTypeNextLatin.woff2);
+}
+
+@font-face {
+  font-family: BMWFontLatin-Light;
+  src: url(assets/fonts/BMWTypeNextLatin-Light.woff2);
+}
+
+$nr-primary-pallete: mat.define-palette($nr-primary-theme);
+$nr-warn-pallete: mat.define-palette($nr-warn-theme);
+$nr-accent-pallete: mat.define-palette($nr-accent-theme);
+
+$nr-dark-primary-pallete: mat.define-palette($nr-dark-primary-theme);
+$nr-dark-warn-pallete: mat.define-palette($nr-dark-warn-theme);
+$nr-dark-accent-pallete: mat.define-palette($nr-dark-accent-theme);
+
+$nr-default-dark-palette: mat.define-palette(mat.$blue-palette);
+
+
+$my-typography: mat.define-typography-config($font-family: '"BMWFontLatin", "Helvetica Neue"');
+
+@include mat.typography-hierarchy($my-typography);
+
+$my-light-theme: mat.define-light-theme((color: (primary: $nr-primary-pallete,
+        accent: $nr-accent-pallete,
+        warn: $nr-warn-pallete ),
+      typography: mat.define-typography-config($font-family: "'BMWFontLatin'"),
+      density: 0,
+    ));
+
+$my-dark-theme: mat.define-dark-theme((color: (primary: $nr-dark-primary-pallete,
+        accent: $nr-dark-accent-pallete,
+        warn: $nr-dark-warn-pallete ),
+      typography: mat.define-typography-config($font-family: "'BMWFontLatin'"),
+      density: 0,
+    ));
+
+$color: map-get($map: $my-dark-theme, $key: color);
+$foreground: map-get($map: $color, $key: foreground);
+
+$themed-foreground: map-merge($foreground, $dark-theme-text-color-map);
+
+$themed-color: map-merge($color, (foreground: $themed-foreground));
+
+$my-dark-theme: map-merge($my-dark-theme, (color: $themed-color));
+
+
+@include mat.core-color($my-light-theme);
+@include mat.button-color($my-light-theme);
+
+// TODO: fix the dark theme colors palette
+
+@media (prefers-color-scheme: dark) {
+  @include mat.core-theme($my-dark-theme);
+  @include mat.button-theme($my-dark-theme);
+  @include mat.all-component-themes($my-dark-theme);
+
+  html {
+    background-color: $html-dark-bg-color;
+  }
+
+  body {
+    color: $dark-theme-text-color;
+
+    .main-wrapper {
+      background-color: $wrapper-dark-bg-color;
+    }
+  }
 }

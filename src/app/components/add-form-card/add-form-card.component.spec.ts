@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddFormCardComponent } from './add-form-card.component';
+import { AddFormCardComponent } from '@/components/add-form-card/add-form-card.component';
 
 describe('AddFormCardComponent', () => {
   let component: AddFormCardComponent;

@@ -1,4 +1,4 @@
-import { Country } from '../enum/country';
+import { Country } from '@/shared/enum/country';
 
 export interface IUserForm {
     userCountry: Country | '';

@@ -1,11 +1,21 @@
 <div class="main-wrapper">
     <h1>Nikita Rudnik Portfolio</h1>
+    <ng-template #navigation>
+        <a mat-menu-item [routerLink]="NavigationPath.MAIN_PAGE">Main Page</a>
+        <a mat-menu-item [routerLink]="NavigationPath.FORMS_PAGE">Forms page</a>
+        <a mat-menu-item [routerLink]="NavigationPath.STYLES_LABORATORY">Styles lab</a>
+    </ng-template>
 
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
-        <a mat-menu-item routerLink="main-page">Main Page</a>
-        <a mat-menu-item routerLink="forms-page">Forms page</a>
-    </mat-menu>
-
+    <div class="navigation-bar">
+        <button mat-button [matMenuTriggerFor]="menu" class="main-menu-toggle-button">Menu</button>
+        <!-- Burger mat-menu for small screens -->
+        <mat-menu #menu="matMenu" role="navigation">
+            <ng-container *ngTemplateOutlet="navigation"></ng-container>
+        </mat-menu>
+        <!-- Navigation menu for desktop screens -->
+        <nav class="main-navigation">
+            <ng-container *ngTemplateOutlet="navigation"></ng-container>
+        </nav>
+    </div>
     <router-outlet></router-outlet>
 </div>

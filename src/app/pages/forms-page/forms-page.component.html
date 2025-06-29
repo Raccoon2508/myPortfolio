@@ -1,6 +1,6 @@
 <div role="form" class="forms-wrapper">
     <div class="user-forms-toolbar">
-        @if (!(pendingTimer$ | async)) {
+        @if ((pendingTimer$ | async) === null) {
             <button (click)="submitForm()" mat-flat-button [disabled]="!!(invalidFormsCounter$ | async) || !userCardsArray.length" color="primary">Submit all forms</button>
         }
         @if (pendingTimer$ | async) {

@@ -1,9 +1,11 @@
-import {HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import {HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 
 import {delay, Observable, of, tap} from 'rxjs';
 
-import {CheckUserResponseData, SubmitFormResponseData} from '../interface/responses';
+import {CheckUserResponseData, SubmitFormResponseData} from '@/shared/interface/responses';
 
 @Injectable()
 export class MockBackendInterceptor implements HttpInterceptor {
