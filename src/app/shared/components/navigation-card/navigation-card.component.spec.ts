@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavigationCardComponent } from './navigation-card.component';
+import { NavigationCardComponent } from '@/shared/components/navigation-card/navigation-card.component';
 
 describe('NavigationCardComponent', () => {
   let component: NavigationCardComponent;
@@ -11,7 +11,7 @@ describe('NavigationCardComponent', () => {
       declarations: [NavigationCardComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(NavigationCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
