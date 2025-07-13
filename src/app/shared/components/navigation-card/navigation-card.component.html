@@ -1,0 +1,9 @@
+<div class="nav-card-wrapper" role="link" tabindex="0" [routerLink]="['/' + card.navigationUrl]">
+    <div class="nav-card-image-container">
+        <img [src]="card.imageUrl" [alt]="card.header">
+    </div>
+    <article class="nav-card-description-container">
+        <h2>{{card.header}}</h2>
+        <p class="nav-card-description">{{card.description}}</p>
+    </article>
+</div>

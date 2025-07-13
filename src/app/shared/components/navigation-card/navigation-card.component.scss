@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+$card-height: 15em;
+
+.nav-card-wrapper {
+    height: 50em;
+    width: 90%;
+    transition: transform .5s .2s ease-in-out;
+}
+
+.nav-card-wrapper:hover {
+    transform: translateX(10px);
+}
+
+.nav-card-wrapper {
+    display: flex;
+    height: $card-height;
+    width: 100%;
+
+    .nav-card-image-container {
+        height: 100%;
+
+        img {
+            aspect-ratio: auto;
+            height: $card-height;
+        }
+    }
+
+    &.even {
+        flex-direction: row-reverse;
+    }
+}
+
+.nav-card-description-container {
+    padding: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-card-wrapper {
+    background-color: $cards-dark-bg-color;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .nav-card-wrapper {
+    box-shadow: $box-shadow-light;
+  }
+}

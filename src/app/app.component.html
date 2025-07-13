@@ -1,21 +1,29 @@
-<div class="main-wrapper">
-    <h1>Nikita Rudnik Portfolio</h1>
-    <ng-template #navigation>
-        <a mat-menu-item [routerLink]="NavigationPath.MAIN_PAGE">Main Page</a>
-        <a mat-menu-item [routerLink]="NavigationPath.FORMS_PAGE">Forms page</a>
-        <a mat-menu-item [routerLink]="NavigationPath.STYLES_LABORATORY">Styles lab</a>
-    </ng-template>
-
-    <div class="navigation-bar">
-        <button mat-button [matMenuTriggerFor]="menu" class="main-menu-toggle-button">Menu</button>
-        <!-- Burger mat-menu for small screens -->
-        <mat-menu #menu="matMenu" role="navigation">
-            <ng-container *ngTemplateOutlet="navigation"></ng-container>
-        </mat-menu>
-        <!-- Navigation menu for desktop screens -->
-        <nav class="main-navigation">
-            <ng-container *ngTemplateOutlet="navigation"></ng-container>
-        </nav>
+<div class="outline-main-wrapper">
+    <div class="main-wrapper">
+        <div>
+            <h1>Frontend Laboratory</h1>
+        </div>
     </div>
-    <router-outlet></router-outlet>
+    <div class="nav-bar-container">
+        <div class="navigation-bar">
+            <button mat-button [matMenuTriggerFor]="menu" class="main-menu-toggle-button">Menu</button>
+            <!-- Burger mat-menu for small screens -->
+            <mat-menu #menu="matMenu" role="navigation">
+                <ng-container *ngTemplateOutlet="navigation"></ng-container>
+            </mat-menu>
+            <!-- Navigation menu for desktop screens -->
+            <nav class="main-navigation">
+                <ng-container *ngTemplateOutlet="navigation"></ng-container>
+            </nav>
+        </div>
+    </div>
+    <div class="main-wrapper" role="list">
+        <ng-template #navigation>
+            <a mat-menu-item [routerLink]="NavigationPath.MAIN_PAGE">Home</a>
+            <a mat-menu-item [routerLink]="NavigationPath.FORMS_PAGE">Forms page</a>
+            <a mat-menu-item [routerLink]="NavigationPath.STYLES_LABORATORY">Styles lab</a>
+            <a mat-menu-item [routerLink]="NavigationPath.CONTACTS">Contacts</a>
+        </ng-template>
+        <router-outlet></router-outlet>
+    </div>
 </div>

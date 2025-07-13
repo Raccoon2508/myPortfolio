@@ -1,0 +1,89 @@
+@import '../../shared/styles/variables';
+
+$description-height: 20em;
+
+.overflow-cutter {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main-page-portrait-container {
+    width: 20em;
+}
+
+.portrait-img {
+    transition: scale 1s;
+}
+
+.portrait-img:hover {
+    scale: 1.1;
+
+}
+
+.main-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.description-block {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+}
+
+
+
+.main-page-description {
+    display: flex;
+
+}
+
+.main-page-description-container {
+    overflow: hidden;
+    padding: 1em;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .main-page-description {
+        background-color: $cards-dark-bg-color;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .main-page-description {
+        box-shadow: 5px 5px 5px $card-shadow-light-color;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .main-page-description {
+        flex-direction: column;
+
+        .main-page-portrait-container {
+            width: 100%;
+        }
+
+        .portrait-img {
+            width: 100%;
+            aspect-ratio: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .main-page-description {
+        flex-direction: row;
+        height: $description-height;
+
+        .portrait-img {
+            height: $description-height;
+            aspect-ratio: auto;
+        }
+    }
+}
