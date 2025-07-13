@@ -20,7 +20,11 @@ const routes: Routes = [
     {
         path: NavigationPath.STYLES_LABORATORY,
         loadChildren: () => import('./pages/styles-laboratory/styles-laboratory.module').then(module => module.StylesLaboratoryModule)
-    }
+    },
+    {
+        path: NavigationPath.CONTACTS,
+        loadChildren: () => import('./pages/contacts-page/contacts.module').then(module => module.ContactsModule)
+    },
 ];
 
 @NgModule({

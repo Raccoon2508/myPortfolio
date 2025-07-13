@@ -11,13 +11,12 @@ import { AngularMaterialModule } from '@/shared/modules/angular-material/angular
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         AngularMaterialModule,
-
     ],
     exports: [AngularMaterialModule],
     providers: [

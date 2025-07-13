@@ -1,23 +1,39 @@
 <div class="main-page-container">
-    <article>
-        <h2>About me</h2>doZ Z
-        <p>As the last train pulled out of the station, Mia realized she had left her notebook on the bench. Inside were
-            the sketches she’d spent months working on—her dreams of becoming an architect captured in pencil and ink.
+        <article class="main-page-description">
+            <div class="main-page-portrait-container">
+                <div class="overflow-cutter">
+                    <img class="portrait-img" src="assets/images/main-portrait.jpg" alt="">
+                </div>
+            </div>
+            <div class="main-page-description-container">
+                <h2>About me</h2>
+                <p class="description-block">As the last train pulled out of the station, Mia realized she had left her notebook on the bench.
+                    Inside were
+                    the sketches she’d spent months working on—her dreams of becoming an architect captured in pencil
+                    and ink.
 
-            Panic rose in her chest. She turned, ready to sprint back, but the station gates had already closed for the
-            night. Only the echo of the departing train and the hum of streetlights remained.
+                    Panic rose in her chest. She turned, ready to sprint back, but the station gates had already closed
+                    for the
+                    night. Only the echo of the departing train and the hum of streetlights remained.
 
-            Defeated, she sat on the curb, watching the city shimmer in the distance. A soft tap on her shoulder
-            startled her.
+                    Defeated, she sat on the curb, watching the city shimmer in the distance. A soft tap on her shoulder
+                    startled her.
 
-            An old man in a conductor’s uniform held out her notebook. “You dropped this,” he said, smiling gently.
+                    An old man in a conductor’s uniform held out her notebook. “You dropped this,” he said, smiling
+                    gently.
 
-            Mia blinked. “How did you—?”
+                    Mia blinked. “How did you—?”
 
-            He tipped his hat. “Sometimes, the things we think we’ve lost just take the long way back.”
+                    He tipped his hat. “Sometimes, the things we think we’ve lost just take the long way back.”
 
-            Then he vanished into the shadows.
+                    Then he vanished into the shadows.
 
-            Clutching her notebook, Mia stood, heart lighter. The city didn’t feel quite so lonely anymore.</p>
-    </article>
+                    Clutching her notebook, Mia stood, heart lighter. The city didn’t feel quite so lonely anymore.</p>
+            </div>
+        </article>
+        <h2>Laboratory zones</h2>
+        @for (item of cards; track item.header; let index = $index) {
+            <app-navigation-card [card]="item"></app-navigation-card>
+        }
+       
 </div>
