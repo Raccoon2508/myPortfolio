@@ -19,5 +19,11 @@ export const MAIN_PAGE_NAV_CARDS: INavigationCard[] = [
         description: 'Lorem',
         imageUrl: 'assets/images/cards-images/forms-icon.png',
         navigationUrl: NavigationPath.CONTACTS
+    },
+    {
+        header: 'Maps',
+        description: 'Lorem',
+        imageUrl: 'assets/images/cards-images/forms-icon.png',
+        navigationUrl: NavigationPath.MAPS
     }
 ];
