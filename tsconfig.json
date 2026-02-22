@@ -24,6 +24,9 @@
       "@/*": [
         "app/*"
       ],
+      "@/assets/*": [
+        "assets/*"
+      ]
     }
   },
   "angularCompilerOptions": {

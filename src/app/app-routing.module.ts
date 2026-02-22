@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { MapsModule } from '@/pages/maps/maps.module';
 import { NavigationPath } from '@/shared/constants/app.config';
 
 const routes: Routes = [
@@ -24,6 +25,10 @@ const routes: Routes = [
     {
         path: NavigationPath.CONTACTS,
         loadChildren: () => import('./pages/contacts-page/contacts.module').then(module => module.ContactsModule)
+    },
+    {
+        path: NavigationPath.MAPS,
+        loadChildren: () => import('@/pages/maps/maps.module').then(module => module.MapsModule)
     },
 ];
 
